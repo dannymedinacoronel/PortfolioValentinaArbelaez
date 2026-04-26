@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentina Arbelaez | Magic Studio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --gold: #d4af37; /* Oro Disney real */
+            --lilac-light: #f8f4ff; 
+            --lilac-medium: #e6e0f8;
+            --lilac-deep: #7d6b9d; 
+            --whatsapp: #25d366;
+            --magic-gradient: linear-gradient(135deg, #fdfcfb 0%, #e2d1f9 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            background: var(--magic-gradient); /* Fondo con un toque de color místico */
+        }
+
+        /* BARRA SUPERIOR CON TOQUE REAL */
+        nav {
+            width: 100%;
+            padding: 20px 0 10px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(125, 107, 157, 0.1);
+        }
+
+        .brand-name {
+            font-family: 'Mea Culpa', cursive; 
+            font-size: 4.2rem; 
+            color: var(--text);
+            text-decoration: none;
+            line-height: 0.7;
+            padding-bottom: 15px;
+            /* Borde dorado con degradado */
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to right, transparent, var(--gold), transparent) 1;
+            width: 80%;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .brand-name:hover {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .disney-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--lilac-deep);
+            margin-top: 15px;
+            background: linear-gradient(90deg, var(--gold), var(--lilac-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            margin-top: 130px; 
+        }
+
+        .portfolio-container {
+            width: 100%;
+            padding: 0 2%;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* SECCIÓN DE CONTACTO MÁGICA */
+        .contact-section {
+            padding: 80px 5%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+            border-top: 1px solid var(--lilac-medium);
+            margin-top: 40px;
+        }
+
+        .contact-header {
+            font-family: 'Mea Culpa', cursive;
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .contact-info {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-item span {
+            color: var(--lilac-deep);
+            font-weight: 700;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .fa-whatsapp { color: var(--whatsapp); }
+        .fa-phone { color: var(--gold); }
+        .fa-envelope { color: var(--lilac-deep); }
+
+        .contact-item:hover {
+            letter-spacing: 4px;
+            color: var(--gold);
+        }
+
+        /* FOOTER ESTILO REALEZA */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            background: var(--text);
+            color: var(--lilac-light);
+        }
+
+        .copyright {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        /* Scrollbar personalizada Lila/Oro */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--lilac-light); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+        @media (max-width: 768px) {
+            .brand-name { font-size: 3.2rem; width: 90%; }
+            .contact-header { font-size: 3rem; }
+            main { margin-top: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="brand-name">Valentina Arbelaez</a>
+        <div class="disney-badge">✨ Disney Tangled Casting • Girona 2026</div>
+    </nav>
+
+    <main>
+        <div class="portfolio-container">
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-99dbc043-c93c-48ae-9f92-ce529f7bdf5a" data-elfsight-app-lazy></div>
+        </div>
+
+        <section class="contact-section">
+            <h2 class="contact-header">Hagamos Magia.</h2>
+            <div class="contact-info">
+                <a href="mailto:valearbelaez14@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email /</span> valearbelaez14@gmail.com
+                </a>
+                
+                <a href="tel:+34603201636" class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>ES /</span> +34 603 201 636
+                </a>
+
+                <a href="https://wa.me/573142804314" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>CO /</span> +57 314 2804 314
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2026 VALENTINA ARBELAEZ | PROFESSIONAL DANCE PORTFOLIO
+        </div>
+    </footer>
+
+</body>
+</html>
